@@ -1,0 +1,12 @@
+name: 'Test Composite Action'
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Composite Action
+        uses: ./.github/actions/composite-action
+        with:
+          run-commands: |
+            echo 'Hello, GitHub Actions!'
+            ls -la
