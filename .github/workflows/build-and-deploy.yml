@@ -10,7 +10,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Build and Deploy
-        uses: githubs-free-organization/react-basic-app/blob/main/.github/composite-actions/build-and-deploy
+        uses: .github/composite-actions/build-and-deploy@main
         with:
           repository: ${{ github.repository }}
           branch: main
