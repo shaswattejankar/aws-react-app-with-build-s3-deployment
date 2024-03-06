@@ -20,10 +20,12 @@ runs:
         ref: ${{ inputs.branch }}
         path: ${{ inputs.path }}
     - name: Install dependencies
+      shell: bash
       run: npm ci 
     - name: Build app
       run: npm run build
     - name: Deploy to GitHub Pages
+      shell: bash
       run: |
         mv build ${{ inputs.path }}/
         cd ${{ inputs.path }}
