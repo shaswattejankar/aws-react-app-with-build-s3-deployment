@@ -11,7 +11,7 @@ inputs:
     description: 'The path to the React app'
     required: true
 runs:
-	  using: 'node18'
+	  using: 'node20'
   steps:
     - name: Checkout repository
       uses: actions/checkout@v2
