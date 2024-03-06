@@ -1,0 +1,15 @@
+name: 'Composite Action'
+description: 'A simple composite action for my organization repo'
+inputs:
+  run-commands:
+    description: 'The commands to run'
+    required:true
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Run commands
+      shell: bash
+      run: |
+        ${{ inputs.run-commands }}

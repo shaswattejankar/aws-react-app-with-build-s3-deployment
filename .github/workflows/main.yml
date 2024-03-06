@@ -1,0 +1,14 @@
+name: 'Test Composite Action'
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Use Composite Action
+        uses: ./.github/actions/composite-action
+        with:
+          run-commands: |
+            echo 'Hello, GitHub Actions!'
+            ls -la
