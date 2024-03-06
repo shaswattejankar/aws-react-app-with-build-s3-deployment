@@ -23,6 +23,7 @@ runs:
       shell: bash
       run: npm ci 
     - name: Build app
+      shell: bash
       run: npm run build
     - name: Deploy to GitHub Pages
       shell: bash
