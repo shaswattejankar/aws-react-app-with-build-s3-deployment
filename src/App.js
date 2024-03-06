@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn GitHub Composite Actions
+          Learn GitHub Composite Actions!
         </a>
       </header>
     </div>
